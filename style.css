@@ -1,0 +1,252 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('assets/wallpaper_mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  position: relative;
+  z-index: 0;
+  flex-direction: column;
+}
+
+/* Camada escura por cima do fundo */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* escurece o fundo */
+  z-index: -1;
+}
+
+.card-lista {
+  background-color: rgba(255, 255, 255, 0.50); /* Transparente */
+  backdrop-filter: blur(2px);
+  width: 90%;
+  max-height: 90vh;
+  min-height: 90vh;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+/* Botão de filtro */
+.btn-filtro {
+  display: block;
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #7450219f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-filtro:hover {
+  background-color: #a06e2d9f;
+}
+
+/* Filtro expandido */
+.filtro-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  padding: 0.8rem;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+  animation: slideDown 0.3s ease forwards;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Animação de cascata */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.filtro-box select,
+.filtro-box input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Estilo de cada livro na lista */
+.livro {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.livro:hover {
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.livro img {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#livros-container {
+  flex: 1; /* ocupa o espaço restante */
+  overflow-y: auto;
+  padding-right: 0.5rem; /* espaço pro scroll */
+}
+
+.livro-info {
+  flex-grow: 1;
+}
+
+.livro-info h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.livro-info p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+#painel-detalhes {
+  background-color: rgba(255, 255, 255, 0.50); /* Transparente */
+  backdrop-filter: blur(2px);
+  width: 90%;
+  max-height: 90vh;
+  min-height: 90vh;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.btn-voltar {
+  align-self: flex-start;
+  background: #7450219f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.detalhes-conteudo img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#detalhe-nome {
+    font-weight:bold;
+    font-size: 20px;
+    justify-self: center;
+}
+
+#detalhe-autor {
+    justify-self: center;
+    font-size: medium;
+    padding-top: 0.3rem;
+}
+
+.detalhes-conteudo hr {
+    margin: 0.8rem 0;
+}
+
+.txt {
+    margin-top: 0.5rem;
+}
+
+#detalhe-resumo {
+    margin-top: 1rem;
+}
+
+#play-music {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+#play-music:hover {
+  background: #fff;
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 1024px) {
+    body {
+        background-image: url('assets/wallpaper.jpg');
+    }
+
+  .card-lista {
+    margin-top: 2rem;
+  }
+}

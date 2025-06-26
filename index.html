@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="style.css" rel="stylesheet" />
+        <link href="reset.css" rel="stylesheet" />
+		<title>MyBooks</title>
+		<script src="script.js" defer></script>
+	</head>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main class="card-lista">
+        <!-- Botão de filtro -->
+        <button id="toggle-filtro" class="btn-filtro">🔍 Filtro</button>
+
+        <!-- Área de filtro escondida por padrão -->
+        <div id="filtro-box" class="filtro-box hidden">
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+            <option value="">Todos</option>
+            <option value="fantasia">Fantasia</option>
+            <option value="ficcao">Ficção</option>
+            <option value="romance">Romance</option>
+            <option value="suspense">Suspense</option>
+            </select>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o nome do livro">
+        </div>
+
+        <!-- Aqui futuramente virá a lista de livros -->
+        <section id="livros-container">
+            <!-- Lista será inserida aqui via JS -->
+        </section>
+
+    </main>
+
+    <!-- Painel de detalhes do livro -->
+    <section id="painel-detalhes" class="hidden">
+        <button id="voltar-lista" class="btn-voltar">⬅ Voltar</button>
+
+        <div class="detalhes-conteudo">
+            <img id="detalhe-capa" src="" alt="Capa do livro" />
+            <h2 id="detalhe-nome"></h2>
+            <h3 id="detalhe-autor"></h3>
+            <hr>
+            <p class="txt"><strong>Gênero:</strong> <span id="detalhe-genero"></span></p>
+            <p class="txt"><strong>Editora:</strong> <span id="detalhe-editora"></span></p>
+            <p class="txt"><strong>Ano:</strong> <span id="detalhe-ano"></span></p>
+            <p id="detalhe-resumo"></p>
+        </div>
+    </section>
+    <footer>
+        <button id="play-music" title="Tocar música">🎵</button>
+
+        <audio id="bg-music" loop>
+        <source src="assets/musica_back.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio HTML5.
+        </audio>
+    </footer>
+</body>
+</html>

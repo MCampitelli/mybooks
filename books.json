@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nome": "1984",
+    "genero": "Ficção Distópica",
+    "editora": "Companhia das Letras",
+    "ano_lancamento": 1949,
+    "autor": "George Orwell",
+    "resumo": "Uma sociedade totalitária que vigia e controla todos os aspectos da vida."
+  },
+  {
+    "id": 2,
+    "nome": "Dom Casmurro",
+    "genero": "Romance",
+    "editora": "Editora Garnier",
+    "ano_lancamento": 1899,
+    "autor": "Machado de Assis",
+    "resumo": "A história de Bentinho e sua dúvida sobre a fidelidade de Capitu."
+  },
+  {
+    "id": 3,
+    "nome": "O Senhor dos Anéis",
+    "genero": "Fantasia",
+    "editora": "HarperCollins",
+    "ano_lancamento": 1954,
+    "autor": "J.R.R. Tolkien",
+    "resumo": "A jornada para destruir o Um Anel e salvar a Terra Média."
+  },
+  {
+    "id": 4,
+    "nome": "Cem Anos de Solidão",
+    "genero": "Realismo Mágico",
+    "editora": "Editora Record",
+    "ano_lancamento": 1967,
+    "autor": "Gabriel García Márquez",
+    "resumo": "A saga da família Buendía na mítica cidade de Macondo."
+  },
+  {
+    "id": 5,
+    "nome": "O Pequeno Príncipe",
+    "genero": "Literatura Infantil",
+    "editora": "Agir",
+    "ano_lancamento": 1943,
+    "autor": "Antoine de Saint-Exupéry",
+    "resumo": "Um piloto encontra um pequeno príncipe que veio de outro planeta."
+  },
+  {
+    "id": 6,
+    "nome": "A Menina que Roubava Livros",
+    "genero": "Drama Histórico",
+    "editora": "Intrínseca",
+    "ano_lancamento": 2005,
+    "autor": "Markus Zusak",
+    "resumo": "Durante a Segunda Guerra, uma menina encontra conforto nos livros."
+  },
+  {
+    "id": 7,
+    "nome": "O Código Da Vinci",
+    "genero": "Thriller",
+    "editora": "Sextante",
+    "ano_lancamento": 2003,
+    "autor": "Dan Brown",
+    "resumo": "Uma busca por segredos ocultos ligados à história da humanidade."
+  },
+  {
+    "id": 8,
+    "nome": "Harry Potter e a Pedra Filosofal",
+    "genero": "Fantasia Juvenil",
+    "editora": "Rocco",
+    "ano_lancamento": 1997,
+    "autor": "J.K. Rowling",
+    "resumo": "O jovem bruxo Harry descobre seu destino na escola de magia."
+  },
+  {
+    "id": 9,
+    "nome": "O Hobbit",
+    "genero": "Fantasia",
+    "editora": "HarperCollins",
+    "ano_lancamento": 1937,
+    "autor": "J.R.R. Tolkien",
+    "resumo": "Bilbo Bolseiro embarca numa aventura para recuperar um tesouro."
+  },
+  {
+    "id": 10,
+    "nome": "Orgulho e Preconceito",
+    "genero": "Romance",
+    "editora": "Penguin Classics",
+    "ano_lancamento": 1813,
+    "autor": "Jane Austen",
+    "resumo": "A relação complicada entre Elizabeth Bennet e o Sr. Darcy."
+  }
+]
