@@ -6,6 +6,16 @@ document.getElementById('voltar-lista').addEventListener('click', () => {
   document.querySelector('.card-lista').classList.remove('hidden');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('books.json')
+    .then(response => response.json())
+    .then(livros => {
+      popularFiltros(livros);
+      // Se quiser armazenar os livros carregados para uso futuro:
+      window.listaDeLivros = livros;
+    })
+    .catch(error => console.error('Erro ao carregar livros.json:', error));
+});
 
 atualizarListaLivros();
 
@@ -25,6 +35,33 @@ const boxFiltro = document.getElementById('filtro-box');
 btnFiltro.addEventListener('click', () => {
   boxFiltro.classList.toggle('hidden');
 });
+
+function popularFiltros(livros) {
+  const generoSet = new Set();
+  const editoraSet = new Set();
+
+  livros.forEach(livro => {
+    generoSet.add(livro.genero);
+    editoraSet.add(livro.editora);
+  });
+
+  const generoSelect = document.getElementById('genero');
+  const editoraSelect = document.getElementById('editora');
+
+  generoSet.forEach(genero => {
+    const option = document.createElement('option');
+    option.value = genero.toLowerCase();
+    option.textContent = genero;
+    generoSelect.appendChild(option);
+  });
+
+  editoraSet.forEach(editora => {
+    const option = document.createElement('option');
+    option.value = editora.toLowerCase();
+    option.textContent = editora;
+    editoraSelect.appendChild(option);
+  });
+}
 
 async function atualizarListaLivros() {
   const container = document.getElementById('livros-container');
@@ -87,10 +124,20 @@ function abrirDetalhesLivro(livro) {
   document.getElementById('detalhe-genero').textContent = livro.genero;
   document.getElementById('detalhe-editora').textContent = livro.editora;
   document.getElementById('detalhe-ano').textContent = livro.ano_lancamento;
+  document.getElementById('detalhe-avaliacao').textContent = livro.avaliacao;
+
+  const preco = parseFloat(livro.preco);
+  document.getElementById('detalhe-preco').textContent = preco.toFixed(2).replace('.', ',');
+
+  document.getElementById('detalhe-paginas').textContent = livro.paginas;
+  
+  const linkElement = document.getElementById('detalhe-link');
+  linkElement.innerHTML = `<a href="${livro.link}" target="_blank">Ver no site</a>`;
+
   document.getElementById('detalhe-resumo').textContent = livro.resumo;
+  document.getElementById('detalhe-opiniao').textContent = livro.opiniao;
 
   // Alterna as telas
   document.querySelector('.card-lista').classList.add('hidden');
   document.getElementById('painel-detalhes').classList.remove('hidden');
 }
-
