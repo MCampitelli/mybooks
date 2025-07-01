@@ -49,7 +49,6 @@ body::before {
   overflow: hidden;
 }
 
-
 /* Botão de filtro */
 .btn-filtro {
   display: block;
@@ -104,7 +103,6 @@ body::before {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
-
 
 /* Título */
 h1 {
@@ -172,6 +170,7 @@ h1 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .btn-voltar {
@@ -197,27 +196,39 @@ h1 {
 }
 
 #detalhe-nome {
-    font-weight:bold;
-    font-size: 20px;
-    justify-self: center;
+  font-weight:bold;
+  font-size: 20px;
+  justify-self: center;
 }
 
 #detalhe-autor {
-    justify-self: center;
-    font-size: medium;
-    padding-top: 0.3rem;
+  justify-self: center;
+  font-size: medium;
+  color: #444;
+  padding-top: 0.3rem;
 }
 
 .detalhes-conteudo hr {
-    margin: 0.8rem 0;
+  margin: 0.8rem 0;
 }
 
-.txt {
-    margin-top: 0.5rem;
+.detalhes-tabela {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto;
+  font-family: Arial, sans-serif;
 }
 
-#detalhe-resumo {
-    margin-top: 1rem;
+.detalhes-tabela td {
+  border: 1px solid black;
+  padding: 0.5rem;
+  vertical-align: top;
+  width: 50%;
+}
+
+.detalhes-tabela td span {
+  display: inline;
 }
 
 #play-music {
