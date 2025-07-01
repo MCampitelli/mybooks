@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="style.css" rel="stylesheet" />
-        <link href="reset.css" rel="stylesheet" />
 		<title>MyBooks</title>
 		<script src="script.js" defer></script>
 	</head>
@@ -22,11 +21,12 @@
         <div id="filtro-box" class="filtro-box hidden">
             <label for="genero">Gênero:</label>
             <select id="genero" name="genero">
-            <option value="">Todos</option>
-            <option value="fantasia">Fantasia</option>
-            <option value="ficcao">Ficção</option>
-            <option value="romance">Romance</option>
-            <option value="suspense">Suspense</option>
+                <option value="">Todos</option>
+            </select>
+
+            <label for="editora">Editora:</label>
+            <select id="editora" name="editora">
+                <option value="">Todas</option>
             </select>
 
             <label for="nome">Nome:</label>
@@ -46,13 +46,35 @@
 
         <div class="detalhes-conteudo">
             <img id="detalhe-capa" src="" alt="Capa do livro" />
-            <h2 id="detalhe-nome"></h2>
-            <h3 id="detalhe-autor"></h3>
+            <div class="detalhes-conteudo-titulo">
+                <h2 id="detalhe-nome"></h2>
+                <h3 id="detalhe-autor"></h3>
+            </div>
             <hr>
-            <p class="txt"><strong>Gênero:</strong> <span id="detalhe-genero"></span></p>
-            <p class="txt"><strong>Editora:</strong> <span id="detalhe-editora"></span></p>
-            <p class="txt"><strong>Ano:</strong> <span id="detalhe-ano"></span></p>
-            <p id="detalhe-resumo"></p>
+            <table class="detalhes-tabela">
+                <tr>
+                    <td><strong>Gênero:</strong> <span id="detalhe-genero"></span></td>
+                    <td><strong>Editora:</strong> <span id="detalhe-editora"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Ano:</strong> <span id="detalhe-ano"></span></td>
+                    <td><strong>Avaliação:</strong> <span id="detalhe-avaliacao">-----</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Preço:</strong> R$<span id="detalhe-preco"></span></td>
+                    <td><strong>N. Paginas:</strong> <span id="detalhe-paginas"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>Link:</strong> <span id="detalhe-link"></span></td>
+                </tr>
+            </table>
+
+            <hr>
+            <div class="detalhes-conteudo-comentario">
+                <p><strong>Opinião Pessoal:</strong> <span id="detalhe-opiniao"></span></p>
+                <p><strong>Resumo:</strong> <span id="detalhe-resumo"></span></p>
+
+            </div>
         </div>
     </section>
     <footer>
